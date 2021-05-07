@@ -75,17 +75,17 @@ function Professional(props) {
     const [ temperature, setTemp ] = useState();
     const [ iconUrl, setUrl ] = useState('');
 
-    useEffect(async () => {
-        try {
-            const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=Philadelphia&units=imperial&appid=${keys.openweatherdata}`);
-            console.log(res);
-            console.log(res.data.weather[0].icon)
-            setUrl(`https://openweathermap.org/img/w/${res.data.weather[0].icon}.png`);
-            setTemp(parseInt(res.data.main.temp))
-            console.log(iconUrl);
-        } catch (err) {
-            console.log(err);
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const res = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=Philadelphia&units=imperial&appid=${keys.openweatherdata}`);
+                setUrl(`https://openweathermap.org/img/w/${res.data.weather[0].icon}.png`);
+                setTemp(parseInt(res.data.main.temp))
+            } catch (err) {
+                console.log(err);
+            }
         }
+        fetchData();
     }, [])
 
     return(
