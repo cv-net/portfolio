@@ -99,7 +99,7 @@ function Professional(props) {
             <h5>Khalil Abdellah</h5><br></br>
             <i>Philadelphia, PA</i><br></br>
             <h5>{temperature}&#176;</h5> 
-            <img src={iconUrl}></img>
+            <img src={iconUrl} alt='icon depicting current weather forecast'></img>
             <Link className='nav-link active' to='/'>Home</Link>
             <Link className='nav-link active' to='/lorem'>freq.ly used code</Link>
             <Link className='nav-link active' to='#'>engineering portfolio</Link>
