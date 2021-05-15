@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react';
 import useInterval from '@use-it/interval';
-import playButton from '../public/play.png';
-import pauseButton from '../public/pause.png';
-import stopButton from '../public/stop.png';
-import stopFalse from '../public/stopfalse.svg';
+import playButton from './img/play.png';
+import pauseButton from './img/pause.png';
+import stopButton from './img/stop.png';
+import stopFalse from './img/stopfalse.svg';
 let minutes, seconds;
 
 function TimerInterface(props) {
