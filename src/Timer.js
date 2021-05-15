@@ -1,7 +1,10 @@
 import React, { useState, useRef } from 'react';
 import useInterval from '@use-it/interval';
+import playButton from '../public/play.png';
+import pauseButton from '../public/pause.png';
+import stopButton from '../public/stop.png';
+import stopFalse from '../public/stopfalse.svg';
 let minutes, seconds;
-
 
 function TimerInterface(props) {
     const timer = useRef(props.time);
@@ -55,23 +58,23 @@ function TimerInterface(props) {
     if (stop) {
         return(
             <div id='sessioncontrols'>
-                <img src={require('../src/play.png')} alt='play button' onClick={handlePlay}></img>
-                <img src={require('../src/stopfalse.svg')} alt='stop button' ></img>
+                <img src={playButton} alt='play button' onClick={handlePlay}></img>
+                <img src={stopFalse} alt='stop button' ></img>
             </div>
         );
     } else if (play) {
         return(
             <div id='sessioncontrols'>
-                <img src={require('../src/pause.png')} alt='pause button' onClick={handlePause}></img>
-                <img src={require('../src/stop.png')} alt='stop button' onClick={handleStop}></img>
+                <img src={pauseButton} alt='pause button' onClick={handlePause}></img>
+                <img src={stopButton} alt='stop button' onClick={handleStop}></img>
             </div>
             
         );
     } else {
         return(
             <div id='sessioncontrols'>
-                <img src={require('../src/play.png')} alt='play button' onClick={handlePlay}></img>
-                <img src={require('../src/stop.png')} alt='stop button' onClick={handleStop}></img>
+                <img src={playButton} alt='play button' onClick={handlePlay}></img>
+                <img src={stopFalse} alt='stop button' onClick={handleStop}></img>
             </div>
         );
     }

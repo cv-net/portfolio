@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import axios from 'axios';
 import keys from './keys';
@@ -59,13 +60,18 @@ Manus et namque utque, senecta haec Ixion bubo **coactus**. In mores, fallaci
 ita ultra decor efficient. Illa sensit dicebar pectore dicere vestibus Actaeona
 **operire concipit metit** date hostem.`
 
+const Home = () => <h1>Home</h1>
+
 function SiteColumns() {
     return(
+        <Router>
         < FlexContainer >
             < Professional className='border border-5' />
-            < MainContent className='border border-5' />
+            < Route exact path='/lorem' component={MainContent} className='border border-5' />
+            < Route exact path='/' component={Home} className='border border-5' />
             < Toolbar className='border border-5' />
         </ FlexContainer >
+        </ Router >
     );
 }
 
@@ -94,10 +100,10 @@ function Professional(props) {
             <i>Philadelphia, PA</i><br></br>
             <h5>{temperature}&#176;</h5> 
             <img src={iconUrl}></img>
-            <a className='nav-link active' href='#'>Home</a>
-            <a className='nav-link active' href='#'>freq.ly used code</a>
-            <a className='nav-link active' href='#'>engineering portfolio</a>
-            <a className='nav-link active' href='#'>data journalism</a>
+            <Link className='nav-link active' to='/'>Home</Link>
+            <Link className='nav-link active' to='/lorem'>freq.ly used code</Link>
+            <Link className='nav-link active' to='#'>engineering portfolio</Link>
+            <Link className='nav-link active' to='#'>data journalism</Link>
         </nav>
     );
 }
