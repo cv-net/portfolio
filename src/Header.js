@@ -12,8 +12,8 @@ const HeaderStyle = styled.header`
 function Header() {
     return(
         < HeaderStyle className='header'>
-            <h2 className='display-2'><strong>a</strong>bdellica</h2>
-            <small className='text-muted'>React.js web development, tools for learning, Python data visualization</small>
+            <h2 className='display-2'><strong>@</strong>abdellica</h2>
+            <small className='text-muted'>React.js web development, Python data visualization & journalism</small>
         </ HeaderStyle >
     );
 }

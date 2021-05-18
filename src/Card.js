@@ -9,11 +9,13 @@ function Card() {
     const [ timeDisplay, setDisplay ] = useState(`${sessionTime/60}:00`);
     const [ isRunning, setIsRunning ] = useState(false);
 
-
     const changeSessionTime = (session) => {
+        setIsRunning(false);
         isRunning ? alert('Stop it first!') :
             session = parseInt(session);
             setSessionTime(session * 60);
+            console.log(setSessionTime(session * 60))
+            console.log(sessionTime + typeof(sessionTime));
             setDisplay(`${session}:00`);
     }
 
