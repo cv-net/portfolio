@@ -1,7 +1,13 @@
 - [ ] Fix deployment issues
 - [ ] Add favicon
 - [x] Get markdown Github edition for checklists
-- [ ] Turn PlasticBagProps into html for clickable divs and embeds and proper picture sizing
+- [ ] Plastic Bag Props
+  - [x] Turn into html for clickable divs and embeds and proper picture sizing
+  - [ ] Add links back (in article and in citations)
+  - [ ] line breaks css
+  - [ ] callout css
+  - [ ] Tableau embeds 
+  - [ ] Github embed at top css and img
 - [ ] Finish react journal timer
   - [x] Fix timer
   - [ ] add notes back

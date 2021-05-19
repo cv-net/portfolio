@@ -25,9 +25,9 @@ const PlasticBag = styled.div`
 function PlasticBagProps() {
     return(
     <PlasticBag>
-        <h1>Political Trickery & Plastic Bag Propositions</h1>
-        <h3>Findings in political campaign data from 2016. Data visualization on California's 2016 Propositions 67 and 65.</h3>
-        <h3><em>by Khalil Abdellah</em></h3>
+        <h2>Plastic Bag Propositions and Political Trickery</h2>
+        <h5>Findings in political campaign data from 2016. Data visualization on California's 2016 Propositions 67 and 65.</h5>
+        <h5><em>by Khalil Abdellah</em></h5>
         <hr/>
             <div>
     This project is the product of an introductory course to data journalism, First Python Notebook. 
