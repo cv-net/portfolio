@@ -11,7 +11,9 @@ function TimerInterface(props) {
 
     const [ play, setPlay ] = useState(false);
     const [ stop, setStop ] = useState(true);
+    const [ pause, setPause ] = useState(false);
     const [ delay, setDelay ] = useState(null);
+
 
     useInterval(() => {
         minutes = parseInt(timer.current / 60, 10);
@@ -33,6 +35,9 @@ function TimerInterface(props) {
     }, delay);
 
     const handlePlay = () => {
+        if (!pause) {
+            timer.current = props.time;
+        }
         setPlay(true);
         setStop(false);
         setDelay(1000); 
@@ -42,6 +47,7 @@ function TimerInterface(props) {
     const handlePause = () => {
         setPlay(false);
         setStop(false);
+        setPause(true);
         setDelay(null);
         props.isRunning(false);
     }
@@ -67,14 +73,13 @@ function TimerInterface(props) {
             <div id='sessioncontrols'>
                 <img src={pauseButton} alt='pause button' onClick={handlePause}></img>
                 <img src={stopButton} alt='stop button' onClick={handleStop}></img>
-            </div>
-            
+            </div>  
         );
     } else {
         return(
             <div id='sessioncontrols'>
                 <img src={playButton} alt='play button' onClick={handlePlay}></img>
-                <img src={stopFalse} alt='stop button' onClick={handleStop}></img>
+                <img src={stopButton} alt='stop button' onClick={handleStop}></img>
             </div>
         );
     }
