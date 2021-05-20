@@ -9,79 +9,105 @@ import figure6 from './img/plastic_bag_props/fig.6.jpg';
 import figure7 from './img/plastic_bag_props/fig.7.jpg';
 
 const PlasticBag = styled.div`
+    font-family: sans-serif, 'Segoe-UI';
     display: grid;
     width: 65%;
     padding: 2em;
     img {
         width: 100%;
     }
-    img.APBA {
+    .APBA {
         float: right;
-        height: 400px;
-        width: 400px;
+        height: 100%;
+        width: 10%;
+        display: inline;
+    }
+    h2 {
+        text-align: center;
+    }
+    h3 {
+        padding-bottom: .5em;
+    }
+    h5 {
+        text-align: left;
+    }
+    .paragraph {
+        padding-bottom: 1em;
+    }
+    .APBApara {
+        width: 60%;
+    }
+    .callout {
+        background-color: #CDCDEB;
+        padding: 1.5em;
+        border-radius: 5%;
+    }
+    .citations {}
+    li {
+        padding-bottom: 1em;
     }
 `
 
 function PlasticBagProps() {
     return(
     <PlasticBag>
-        <h2>Plastic Bag Propositions and Political Trickery</h2>
+        <h2>Plastic Bag Propositions and </h2><h2>Political Trickery</h2>
         <h5>Findings in political campaign data from 2016. Data visualization on California's 2016 Propositions 67 and 65.</h5>
         <h5><em>by Khalil Abdellah</em></h5>
         <hr/>
-            <div>
-    This project is the product of an introductory course to data journalism, First Python Notebook. 
-    First Python Notebook used data from the California Civic Data Coalition (CCDC), which cleans and 
-    organizes publicly available political campaign finance data from the state of California (CAL-ACCESS). 
+            <div className='paragraph'>
+    This project is the product of an introductory course to data journalism, <a href='https://www.firstpythonnotebook.org/about/index.html' target='_blank' rel="noreferrer">First Python Notebook.</a>  
+     First Python Notebook used data from the <a href='https://www.californiacivicdata.org/' target='_blank' rel="noreferrer">California Civic Data Coalition (CCDC)</a>, which cleans and 
+    organizes publicly available political campaign finance data from the state of California (<a href='https://cal-access.sos.ca.gov/' target='_blank' rel="noreferrer">CAL-ACCESS</a>). 
     The course focused on data from California's 2016 Ballot Propositions, interviewing the data and 
     visualizing it with Python Jupyter Notebook, emphasizing the journalistic knowledge and 
     sense needed to interpret the data responsibly. 
             </div>
-            <div>
+            <div className='paragraph'>
     For example, the data provided by CAL-ACCESS only reports campaign contributions greater than $100. 
     The course only provided half of the complete contribution data, as the other half were early 
     contributions from 2013-14, likely not necessary for the aims of the introductory course. 
             </div>
-            <div>
+            <div className='paragraph'>
     Even with missing data, the visualization for Proposition 67's contributions (Figure 1) may 
     perhaps be considered representative of the many, small donations made to the proposition. 
     I was able to acquire and clean the missing data from Proposition 65, and all of it is 
     reflected in Figure 2.            
             </div>
-            <div>
+            <div className='paragraph'>
     The visualizations below were created in Tableau, after geocoding the data based on the 
     ZIP codes provided in the CCDC dataset.            
             </div>
-            <div>
+            <div className='paragraph'>
     In California, there were twin propositions on the 2016 ballot, Propositions 65 and 67. 
     Proposition 67 represented a vote on Senate Bill 270, which was a ban on single-use plastic 
     carryout bags in grocery stores. Under SB-270, single-use plastic bags would be replaced with 
     re-usable bags, which would be for sale to grocery store customers. 
             </div>
-            <div>
+            <div className='paragraph'>
     Proposition 65 presented as a more sustainable version of Proposition 67 in its ballot narrative. 
     In actuality, both propositions were only on the ballot because Prop. 65 challenged to 
     veto SB-270 altogether.
             </div>
-            <div>
+            <div className='paragraph'>
     It may have seemed, to an uninformed voter, that the main difference between Propositions 65 and 67 
     was about where the revenue from selling re-usable bags would go.             
             </div>
-            <div>
+            <div className='paragraph'>
     Proposition 67 was a vote on the ban itself, and said that the revenue would go back to grocery 
     store owners, to cover their costs for manufacturing and procuring the bags, and educating customers
     on sustainable shopping. 
             </div>
-            <div>
+            <div className='paragraph'>
     Interviewing the campaign finance data provided by CCDC and reading the official ballot narratives 
     made it clear that Proposition 65 and its plastic-producing backers had 
     clandestine (however obvious) motivations.
             </div>
-            <div>
+            <div className='paragraph'>
     Proposition 65 said that the revenue from re-usable bag sales would go to an 
     Environmental Protection and Enhancement Fund (EPEF). 
             </div>
-            <div>
+            <div className='paragraph'>
                 <em>
     "The Wildlife Conservation Board would have utilized the fund for environmental protection and 
     grants to environmental conservation organizations. Grants could have been used for drought mitigation; 
@@ -89,53 +115,55 @@ function PlasticBagProps() {
     and state, regional, and local parks." - Ballotpedia.com
                 </em>
             </div>
-            <div>
-    Though the EPEF seems a worthwhile cause, environmentalist support largely fell with Proposition 67. 
+            <div className='paragraph'>
+    Though the EPEF seems a worthwhile cause, environmentalist support <a href='https://ballotpedia.org/California_Proposition_67,_Plastic_Bag_Ban_Veto_Referendum_(2016)#Support_for_.22yes.22_vote' target='_blank' rel="noreferrer">largely fell with Proposition 67</a>. 
     That's a hint into the story of the twin propositions, which the campaign finance data will begin to 
     clarify. 
             </div>
-            <div>
+            <div className='paragraph'>
     This is a first look at the campaign finance data, provided by the California Civic Data Coalition. 
     It immediately stuck out that the same 5 contributors that supported Proposition 65, opposed Proposition 67. 
     This was because the two propositions were listed together as the result of a successful petition in California courts.
             </div>
-            <img src={figure1}/>
+            <img src={figure1} alt='Figure 1'/>
             <p>Fig. 1, a screenshot from the Python notebook for this project. Available on Github after the jump.</p>
-            <div>
+            <div className='paragraph APBApara'>
     These 5 companies contributed to the one committee sponsoring the proposition, the American Progressive Bag Alliance.
     Proposition 65 didn't have any contributions against it, probably because it wouldn't have been worth taking 
     focus away from Proposition 67.            
             </div>
-            <img src={figure7} className='APBA'/>
-            <img src={figure2}/>
+            <img src={figure7} className='APBA' alt='Logo for the American Progressive Bag Alliance'/>
+            <img src={figure2} alt='Figure 2'/>
             <p>Figure 2, available on Tableau Public.</p>
-            <div>
+            <div className='paragraph'>
     Contributions supporting Prop. 65 averaged $99,311.60 (27 contributions) which is, on average, over 300x higher than those supporting Prop. 67.
             </div>
             <h3>"STOP THE SWEETHEART BAG TAX DEAL. HELP THE ENVIRONMENT"</h3>
-            <div>
+            <div className='paragraph'>
     The official ballot argument for Proposition 65 that was presented to voters claimed that grocery stores 
     would profit from selling paper bags in place of plastic bags. Prop. 65's redirection of funds from 
     grocery stores to the EPEF claimed to prevent profiteering, to keep the environmentalist effort pure. 
             </div>
-            <div>
+            <div className='paragraph'>
     The opposing argument was that the revenue from selling paper bags would have covered the grocery stores'
     costs for buying the bags and providing environmentally educational material to customers, which 
     Prop. 67 mandated.
             </div>
-            <div>
+            <div className='paragraph callout'>
     Prop. 65 official ballot narrative, presented to voters in the booth
 
     "DON'T BE FOOLED BY PROP 67. 
-    It is a $300 million per year HIDDEN TAX INCREASE on California consumers who will be forced to pay a minimum 10 cents for every paper and thick plastic grocery bag they are given at the checkout.
-    And not one penny goes to the environment. Instead, the Legislature gave all $300 million in new tax revenue to grocers as extra profit.
+    It is a $300 million per year HIDDEN TAX INCREASE on California consumers who will be forced to pay a 
+    minimum 10 cents for every paper and thick plastic grocery bag they are given at the checkout.
+    And not one penny goes to the environment. Instead, the Legislature gave all $300 million in new tax 
+    revenue to grocers as extra profit.
     Stop the sweetheart special interest deal... VOTE NO ON PROP 67. "
             </div>
-            <div>
+            <div className='paragraph'>
     Proposition 67 had many small contributors, largely from California residents.
             </div>
             <h3>Prop. 67 - REFERENDUM TO OVERTURN BAN ON SINGLE-USE PLASTIC BAGS.</h3>
-            <img src={figure3}/>
+            <img src={figure3} alt='Figure 3'/>
             <p>Figure 3, available on Tableau Public</p>
             <ul>
                 <li>
@@ -145,27 +173,27 @@ function PlasticBagProps() {
                     Average contribution of $286.17
                 </li>
             </ul>
-            <img src={figure4}/>
+            <img src={figure4} alt='Figure 4'/>
             <p>
-                Figure 4, from Money in Politics : An Analysis of 2016 California Ballot Propositions Contributions 
-                by Serigne Mourtallah M'backe Faye, 2021  
+                Figure 4, from <a href='https://github.com/mourtallah/CA-Ballot-Props' target='_blank' rel="noreferrer">Money in Politics : An Analysis of 2016 California Ballot Propositions Contributions 
+                by Serigne Mourtallah M'backe Faye, 2021</a> 
             </p>
-            <div>
+            <div className='paragraph'>
     When looking at all the California ballot propositions in 2016, Prop. 67 was on the higher end 
     with 6,000+ contributors, as opposed to Prop. 65's five contributors.
             </div>
-            <img src={figure5}/>
+            <img src={figure5} alt='Figure 5'/>
             <p>Figure 5, a screenshot from the Python notebook for the project, available on Github.</p>
-            <div>
+            <div className='paragraph'>
     Prop. 67 raised only about 2/3 of what Prop. 65 raised, which was largely done by the four plastics producers.
             </div>
             <h3>67 vs. 65</h3>
-            <div>
-    We find a story about the two propositions, and narratives about contributor motives on Ballotpedia.
+            <div className='paragraph'>
+    We find a story about the two propositions, and narratives about contributor motives on <a href='https://ballotpedia.org/California_Proposition_65,_Dedication_of_Revenue_from_Disposable_Bag_Sales_to_Wildlife_Conservation_Fund_(2016)' target='_blank' rel="noreferrer">Ballotpedia</a>.
             </div>
-            <img src={figure6}/>
+            <img src={figure6} alt='Figure 6'/>
             <p>Figure 6, from Ballotpedia.</p>
-            <div>
+            <div className='paragraph'>
     Prop. 65 would have only succeeded in its surface aims if it both props won, and 65 succeeded with a 
     greater margin than67's winning margin. 
 
@@ -176,20 +204,25 @@ function PlasticBagProps() {
     confuse voters into voting against the plastic bag ban altogether. This is supported when we look at 
     who contributed: four plastics companies, against the citizens of California.
             </div>
-            <div>
-                <div>
+            <div className='callout'>
+                <div className='paragraph'>
     Prop. 67 official ballot narrative, presented to voters in the booth.
 
     "YES on 67 to REDUCE LITTER, PROTECT OUR OCEAN and WILDLIFE, and REDUCE CLEAN-UP COSTS.
-    Single-use plastic shopping bags create some of the most visible litter that blows into our parks, trees and neighborhoods, and washes into our rivers, lakes and ocean. A YES vote will help keep discarded plastic bags out of our mountains, valleys, beaches and communities, and keep them beautiful. The law also will save our state and local  communities tens of millions of dollars in litter clean-up costs.
+    Single-use plastic shopping bags create some of the most visible litter that blows into our parks, 
+    trees and neighborhoods, and washes into our rivers, lakes and ocean. A YES vote will help keep discarded 
+    plastic bags out of our mountains, valleys, beaches and communities, and keep them beautiful. 
+    The law also will save our state and local  communities tens of millions of dollars in litter clean-up costs.
 
     OUT-OF-STATE PLASTIC BAG COMPANIES ARE OPPOSING CALIFORNIA'S PROGRESS
-    Opposition to this law is funded by four large out-of-state state plastic bag companies. They don't want California to take leadership on plastic bag waste, and are trying to defeat this measure to protect their profits.
-    Don't believe their false claims. We should give California's plastic bag law a chance to work, especially with so much success already at the local level."            
+    Opposition to this law is funded by four large out-of-state state plastic bag companies. They don't want 
+    California to take leadership on plastic bag waste, and are trying to defeat this measure to protect their profits.
+    Don't believe their false claims. We should give California's plastic bag law a chance to work, especially 
+    with so much success already at the local level."            
                 </div>
             </div>
             <h3>Political Trickery</h3>
-            <div>
+            <div className='paragraph'>
     In this story, a few plastic bag companies making up the APBA put their money together and created a 
     misleading proposition to sabotage the Prop. 67 plastic bag ban. That Prop. 65 was listed in opposition 
     to Prop. 67, and that Prop. 65 was sponsored by plastic bag companies, says that 65 suggest was 
@@ -198,34 +231,66 @@ function PlasticBagProps() {
     destructive as it accused Prop. 67 of being. The APBA was the real 'sweetheart', trying to 
     meet its own needs at the public's expense. 
             </div>
-            <div>
+            <div className='paragraph'>
     The story of Propositions 67 and 65 is important because it's an example of political tricks at 
-    the state level. Politicians use disingenuous narratives and use policies as bargaining chips for 
-    partisan aims.
+    the state level. Politicians use disingenuous narratives and <a href='https://www.theverge.com/2020/12/29/22204976/section-230-senate-deal-stimulus-talks-checks' target='_blank' rel="noreferrer">use policies as bargaining chips for 
+    partisan aims</a>.
             </div>
-            <h3>Citations:</h3>
-            <ul>
+        <div className='citations'>
+        <h3>Citations:</h3>
+        <ul>
                 <li>
-                    <a>
-                        Money in Politics : An Analysis of 2016 California Ballot Propositions Contributions by Serigne Mourtallah M'backe Faye, 2021 
-                    </a>
+                        <a href='https://github.com/mourtallah/CA-Ballot-Props' target='_blank' rel="noreferrer">
+                                Money in Politics : An Analysis of 2016 California Ballot Propositions Contributions by Serigne Mourtallah M'backe Faye, 2021 
+                        </a>
                 </li>
                 <li>
-                    <a>
-                        California Proposition 65, Dedication of Revenue from Disposable Bag Sales to Wildlife Conservation Fund (2016)
-                    </a>
+                        <a href='https://ballotpedia.org/California_Proposition_65,_Dedication_of_Revenue_from_Disposable_Bag_Sales_to_Wildlife_Conservation_Fund_(2016)' target='_blank' rel="noreferrer">
+                                California Proposition 65, Dedication of Revenue from Disposable Bag Sales to Wildlife Conservation Fund (2016)
+                        </a>
                 </li>
                 <li>
-                    <a>
-                        Data provided by the California Civic Data Coalition via First Python Notebook (Ben Welsh, 2020) 
-                    </a>
+                        <a href='https://www.firstpythonnotebook.org/' target='_blank' rel="noreferrer">
+                                Data provided by the California Civic Data Coalition via First Python Notebook (Ben Welsh, 2020) 
+                        </a>
                 </li>
                 <li>
-                    <a href='https://www.chicagotribune.com/nation-world/chi-california-governor-plastic-bag-ban-20140930-story.html'>
-                        California governor signs phase-out of plastic bags by Patrick McGreevy (2014)
-                    </a>
+                        <a href='https://www.chicagotribune.com/nation-world/chi-california-governor-plastic-bag-ban-20140930-story.html' target='_blank' rel="noreferrer">
+                                California governor signs phase-out of plastic bags by Patrick McGreevy (2014)
+                        </a>
                 </li>
-            </ul>
+        </ul>
+        </div>
+        {/* <div class='tableauPlaceholder' id='viz1621453079925' style='position: relative'>
+                <noscript>
+                        <a href='#'>
+                                <img alt='Prop. 67 Contribution Amounts:Portion of total data ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Prop67Contributions&#47;Sheet1&#47;1_rss.png' style='border: none' />
+                        </a>
+                </noscript>
+                <object class='tableauViz'  style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                        <param name='embed_code_version' value='3' /> 
+                        <param name='site_root' value='' />
+                        <param name='name' value='Prop67Contributions&#47;Sheet1' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Prop67Contributions&#47;Sheet1&#47;1.png' /> 
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' />
+                        <param name='language' value='en' />
+                </object>
+        </div>                
+        <script type='text/javascript'>
+                var divElement = document.getElementById('viz1621453079925');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+                var scriptElement = document.createElement('script');                    
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);                        
+        </script> */}
         </PlasticBag>
 
     );

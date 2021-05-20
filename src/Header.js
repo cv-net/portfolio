@@ -22,7 +22,7 @@ function Header() {
             <h2 className='display-2'><strong>@</strong>abdellica</h2>
             <small className='text-muted'>React.js web development, Python data visualization & journalism</small><br />
             <div>
-                <a href='https://twitter.com/abdellica' target='_blank'><img src={twitter}/></a>  <a href='https://linkedin.com/in/khalilabdellah' target='_blank'><img src={linkedin}/>  </a><a href='https://github.com/cv-net' target='_blank'><img src={github}/></a>
+                <a href='https://twitter.com/abdellica' target='_blank' rel="noreferrer"><img src={twitter} alt="link to Khalil Abdellah's Twitter page"/></a>  <a href='https://linkedin.com/in/khalilabdellah' target='_blank' rel="noreferrer"><img src={linkedin} alt="link to Khalil Abdellah's LinkedIn page"/>  </a><a href='https://github.com/cv-net' target='_blank' rel="noreferrer"><img src={github} alt="link to Khalil Abdellah's GitHub page"/></a>
             </div>
         </ HeaderStyle >
     );
