@@ -9,7 +9,7 @@ import figure6 from './img/plastic_bag_props/fig.6.jpg';
 import figure7 from './img/plastic_bag_props/fig.7.jpg';
 
 const PlasticBag = styled.div`
-    @media (max-width: 391px) {
+    @media (max-width: 415px) {
         width: 100%;
     }
     font-family: sans-serif, 'Segoe-UI';

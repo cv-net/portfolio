@@ -14,13 +14,13 @@ const HeaderStyle = styled.header`
         padding-bottom: 1.5em;
     }
 
-    @media (max-width: 391px) {
+    @media (max-width: 415px) {
         height: 8%;
         img {
             width: 10%;
         }
     }
-    @media (min-width: 392px) {
+    @media (min-width: 416px) {
         padding: 2em;
         img {
             width: 2%;

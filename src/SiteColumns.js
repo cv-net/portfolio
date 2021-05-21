@@ -15,7 +15,7 @@ const FlexContainer = styled.div`
     align-content: stretch;
     width: 100%;
     
-    @media (max-width: 391px) {
+    @media (max-width: 415px) {
         flex-flow: column nowrap;
         .panel {
             width: 100%;
@@ -37,7 +37,7 @@ const FlexContainer = styled.div`
         }
     }
 
-    @media (min-width: 392px) {
+    @media (min-width: 416px) {
         margin: 0;
         flex-flow: column no-wrap;
 }
