@@ -3,18 +3,46 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import axios from 'axios';
 import keys from './keys';
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown';
 import Card from './Card';
 // import plasticbagpropsMarkdown from './plastic_bag_props.md'
 import PlasticBagProps from './PlasticBagProps'
 
 const FlexContainer = styled.div`
-    width: 100%;
-    margin: 0;
-    display: flex;
+    display: flex;  
     justify-content: center;
     align-items: stretch;
     align-content: stretch;
+    width: 100%;
+    
+    @media (max-width: 391px) {
+        flex-flow: column nowrap;
+        .panel {
+            width: 100%;
+            height: 33%;
+        }
+        .professional {
+            order: -2;
+        }
+        .main-content {
+            order: 1;
+        }
+        .toolbar {
+            order: -1;
+        }
+        select {
+            float: right;
+            margin: auto 1em auto;
+            padding: .5em;
+        }
+    }
+
+    @media (min-width: 392px) {
+        margin: 0;
+        flex-flow: column no-wrap;
+}
+    
+
 `;
 
 const MCStyle = styled.div`
@@ -96,7 +124,7 @@ function Professional(props) {
     }, [])
 
     return(
-        <nav className='panel flex-column border border-5 border-success p-4'>
+        <nav className='panel flex-column border border-5 border-success p-4 professional'>
             <h5>Khalil Abdellah</h5><br></br>
             <i>Philadelphia, PA</i><br></br>
             <img src={iconUrl} alt='icon depicting current weather forecast'></img><h5>{temperature}&#176;</h5> <br></br>

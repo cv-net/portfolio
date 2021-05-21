@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import useInterval from '@use-it/interval';
 import playButton from './img/play.png';
 import pauseButton from './img/pause.png';
@@ -14,6 +14,9 @@ function TimerInterface(props) {
     const [ pause, setPause ] = useState(false);
     const [ delay, setDelay ] = useState(null);
 
+    useEffect(() => {
+        timer.current = props.time;
+    }, [props.time])
 
     useInterval(() => {
         minutes = parseInt(timer.current / 60, 10);
@@ -38,6 +41,7 @@ function TimerInterface(props) {
         if (!pause) {
             timer.current = props.time;
         }
+        setPause(false);
         setPlay(true);
         setStop(false);
         setDelay(1000); 
@@ -54,6 +58,7 @@ function TimerInterface(props) {
 
     const handleStop = () => {
         setPlay(false);
+        setPause(false);
         setStop(true);
         setDelay(null);
         timer.current = props.time;

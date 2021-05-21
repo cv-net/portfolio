@@ -9,6 +9,9 @@ import figure6 from './img/plastic_bag_props/fig.6.jpg';
 import figure7 from './img/plastic_bag_props/fig.7.jpg';
 
 const PlasticBag = styled.div`
+    @media (max-width: 391px) {
+        width: 100%;
+    }
     font-family: sans-serif, 'Segoe-UI';
     display: grid;
     width: 65%;
@@ -38,7 +41,9 @@ const PlasticBag = styled.div`
     .callout {
         background-color: #CDCDEB;
         padding: 1.5em;
+        margin-bottom: 1em;
         border-radius: 5%;
+
     }
     .citations {}
     li {

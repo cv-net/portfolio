@@ -1,4 +1,8 @@
-- [ ] Fix deployment issues
+- [x] Fix deployment issues
+  - Push to master branch (development branch)
+  - `npm run predeploy ; npm run deploy`
+  - Check gh-pages branch on github, if it updated with your latest commit, the site will be updated in a matter of minutes
+- [ ] Mobile-responsive CSS
 - [ ] Add favicon
 - [x] Get markdown Github edition for checklists
 - [ ] Plastic Bag Props

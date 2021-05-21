@@ -8,12 +8,26 @@ const HeaderStyle = styled.header`
     // font-family: sans-serif, 'Segoe-UI';
     background-color: #FFFFFC;
     text-align: center;
-    padding: 2em;
+    padding: 1em;
     background-image: url('../public/ibnalrabin.png');
-    img {
-        width: 2%;
-        height: 2%;
+    .text-muted {
+        padding-bottom: 1.5em;
     }
+
+    @media (max-width: 391px) {
+        height: 8%;
+        img {
+            width: 10%;
+        }
+    }
+    @media (min-width: 392px) {
+        padding: 2em;
+        img {
+            width: 2%;
+            height: 2%;
+        }
+    }
+
 `;
 
 function Header() {
