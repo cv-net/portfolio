@@ -54,7 +54,7 @@ const PlasticBag = styled.div`
 function PlasticBagProps() {
     return(
     <PlasticBag>
-        <h2>Plastic Bag Propositions and </h2><h2>Political Trickery</h2>
+        <h2>Plastic Bag Propositions and </h2><h2>Political Tricks</h2>
         <h5>Findings in political campaign data from 2016. Data visualization on California's 2016 Propositions 67 and 65.</h5>
         <h5><em>by Khalil Abdellah</em></h5>
         <hr/>
@@ -210,7 +210,7 @@ function PlasticBagProps() {
     with so much success already at the local level."            
                 </div>
             </div>
-            <h3>Political Trickery</h3>
+            <h3>Political Tricks</h3>
             <div className='paragraph'>
     In this story, a few plastic bag companies making up the APBA put their money together and created a 
     misleading proposition to sabotage the Prop. 67 plastic bag ban. That Prop. 65 was listed in opposition 
