@@ -5,6 +5,10 @@ import axios from 'axios';
 import keys from './keys';
 import ReactMarkdown from 'react-markdown';
 import Card from './Card';
+import bg from './img/bg.svg';
+import bg2 from './img/bg2.svg';
+import bg3 from './img/bg3.svg';
+import bg4 from './img/bg4.svg';
 // import plasticbagpropsMarkdown from './plastic_bag_props.md'
 import PlasticBagProps from './PlasticBagProps'
 
@@ -21,15 +25,19 @@ const FlexContainer = styled.div`
             width: 100%;
             height: 33%;
         }
+        
         .professional {
             order: -2;
         }
+
         .main-content {
             order: 1;
         }
+
         .toolbar {
             order: -1;
         }
+
         select {
             float: right;
             margin: auto 1em auto;
@@ -40,8 +48,8 @@ const FlexContainer = styled.div`
     @media (min-width: 416px) {
         margin: 0;
         flex-flow: column no-wrap;
+        // background-image: url(${bg}), url(${bg2});
 }
-    
 
 `;
 
@@ -98,7 +106,7 @@ function SiteColumns() {
             < Route exact path='/portfolio' component={PlasticBagProps} className='border border-5' />
             < Route exact path='/lorem' component={MainContent} className='border border-5' />
             < Route exact path='plasticbagprops' component={PlasticBagProps} className='border border-5' />
-            < Toolbar className='border border-5' />
+            < Toolbar className='' />
         </ FlexContainer >
         </ Router >
     );
@@ -124,7 +132,7 @@ function Professional(props) {
     }, [])
 
     return(
-        <nav className='panel flex-column border border-5 border-success p-4 professional'>
+        <nav className='panel flex-column p-5 border border-5 border-success professional'>
             <h5>Khalil Abdellah</h5><br></br>
             <i>Philadelphia, PA</i><br></br>
             <img src={iconUrl} alt='icon depicting current weather forecast'></img><h5>{temperature}&#176;</h5> <br></br>
@@ -145,7 +153,7 @@ function Professional(props) {
 
 function MainContent() {
     return(
-        <MCStyle  className='panel main-content flex-column border border-1 p-4'>
+        <MCStyle  className='panel main-contentflex-column p-5'>
             <PlasticBagProps />
         </MCStyle>
     );
@@ -154,7 +162,7 @@ function MainContent() {
 function Toolbar() {
     return(
         <>
-            <nav className='panel toolbar flex-column border border-5 border-success p-4'>
+            <nav className='panel toolbar flex-column p-5 border border-5 border-success'>
                 <h3 className='mute'>Pomodoro Timer</h3>
                 <Card />
             </nav>

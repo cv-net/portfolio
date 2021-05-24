@@ -2,13 +2,13 @@
   - Push to master branch (development branch)
   - `npm run predeploy ; npm run deploy`
   - Check gh-pages branch on github, if it updated with your latest commit, the site will be updated in a matter of minutes
-- [ ] Mobile-responsive CSS
+- [x] Mobile-responsive CSS
 - [ ] Add favicon
 - [x] Get markdown Github edition for checklists
 - [ ] Plastic Bag Props
   - [x] Turn into html for clickable divs and embeds and proper picture sizing
-  - [ ] Add links back (in article and in citations)
-  - [ ] line breaks css
+  - [x] Add links back (in article and in citations)
+  - [x] line breaks css
   - [ ] callout css
   - [ ] Tableau embeds 
   - [ ] Github embed at top css and img

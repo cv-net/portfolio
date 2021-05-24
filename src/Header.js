@@ -3,13 +3,14 @@ import styled from 'styled-components';
 import twitter from './img/twitter.png';
 import linkedin from './img/linkedin.png';
 import github from './img/github.png';
+import headerbg from './img/ibnalrabin.png';
 
 const HeaderStyle = styled.header`
     // font-family: sans-serif, 'Segoe-UI';
     background-color: #FFFFFC;
     text-align: center;
     padding: 1em;
-    background-image: url('../public/ibnalrabin.png');
+    // background-image: url(${headerbg});
     .text-muted {
         padding-bottom: 1.5em;
     }
