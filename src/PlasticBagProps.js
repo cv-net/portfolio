@@ -126,7 +126,7 @@ function PlasticBagProps() {
     Proposition 65 didn't have any opposing contributions, probably because it wouldn't have been worth taking 
     focus away from Proposition 67.            
             </div>
-            <img src={figure7} className='APBA' alt='Logo for the American Progressive Bag Alliance'/>
+            {/* <img src={figure7} className='APBA' alt='Logo for the American Progressive Bag Alliance'/> */}
             <img src={figure2} alt='Figure 2'/>
             <p>Figure 2, available on Tableau Public.</p>
             <div className='paragraph'>
